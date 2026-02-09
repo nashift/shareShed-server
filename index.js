@@ -12,9 +12,9 @@ shareShedServer.use(express.json())
 const PORT = 3000
 
 shareShedServer.listen(PORT,()=>{
-    console.log("ShareShed Server started...");  
+    console.log(`ShareShed Server started on port ${PORT}...`);  
 })
 
 shareShedServer.get('/',(request,response)=>{
-    request.status(200).send("server ok...")
+    response.status(200).send("server ok...")
 })
